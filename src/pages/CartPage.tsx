@@ -1,13 +1,10 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext } from 'react';
 import { AppContext } from '../utils/AppContext';
 import { ProductCard } from '../components/ProductCard';
-
+import { Checkout } from '../components/Checkout';
 export const CartPage = () => {
   const { cart } = useContext(AppContext);
 
-
-
-  
   return (
     <div className="cart-page">
       <h1>Cart Page</h1>
@@ -16,6 +13,7 @@ export const CartPage = () => {
       ) : (
         cart.map((product) => <ProductCard {...product} />)
       )}
+      <Checkout />
     </div>
   );
 };
