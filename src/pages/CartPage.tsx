@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { AppContext } from '../utils/AppContext';
 import { ProductCard } from '../components/ProductCard';
-
+import { Checkout } from '../components/Checkout';
 export const CartPage = () => {
   const { cart } = useContext(AppContext);
 
@@ -13,6 +13,7 @@ export const CartPage = () => {
       ) : (
         cart.map((product) => <ProductCard {...product} />)
       )}
+      <Checkout />
     </div>
   );
 };

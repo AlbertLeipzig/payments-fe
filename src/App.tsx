@@ -7,7 +7,7 @@ const VITE_APP_PAYPAL_CLIENT_ID = import.meta.env.VITE_APP_PAYPAL_CLIENT_ID;
 
 const initialPaypalOptions = {
   clientId: VITE_APP_PAYPAL_CLIENT_ID,
-  currency: 'USD',
+  currency: 'Euro',
   intent: 'capture',
 };
 
@@ -17,24 +17,24 @@ function App() {
   return (
     <>
       <AppProvider>
-        <header>
-          <nav>
-            <ul>
-              <li>
-                <NavLink to="/">Home</NavLink>
-              </li>
-              <PayPalScriptProvider options={initialPaypalOptions}>
+        <PayPalScriptProvider options={initialPaypalOptions}>
+          <header>
+            <nav>
+              <ul>
+                <li>
+                  <NavLink to="/">Home</NavLink>
+                </li>
                 <li>
                   <NavLink to="/cart">Cart</NavLink>
                 </li>
-              </PayPalScriptProvider>
-              ;
-            </ul>
-          </nav>
-        </header>
-        <main>
-          <Outlet />
-        </main>
+                ;
+              </ul>
+            </nav>
+          </header>
+          <main>
+            <Outlet />
+          </main>
+        </PayPalScriptProvider>
       </AppProvider>
     </>
   );
