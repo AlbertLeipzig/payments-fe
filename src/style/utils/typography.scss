@@ -1,0 +1,77 @@
+@use './colors.scss' as *;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+$fontFace: 'Playfair Display', serif;
+
+@mixin baseFont {
+  font-family: $fontFace;
+  color: $white;
+  font-size: 2.1rem;
+}
+
+h1 {
+  font-family: $fontFace;
+  color: $white;
+  font-size: 3.5rem;
+  text-align: center;
+  margin: 3ch 0;
+}
+
+h2 {
+  font-family: $fontFace;
+  color: $white;
+  font-size: 2.7rem;
+}
+
+h3 {
+  font-family: $fontFace;
+  color: $white;
+  font-size: 2.1rem;
+  font-weight: 900;
+}
+
+p {
+  @include baseFont;
+}
+
+a {
+  @include baseFont;
+  padding-bottom: 2.5px;
+  transition: 300ms;
+  &:hover {
+    color: $acccentColor;
+  }
+  &:focus {
+    border-bottom: 2px solid $acccentColor;
+    outline: none;
+  }
+}
+
+li {
+  @include baseFont;
+}
+
+label {
+  @include baseFont;
+}
+
+input {
+  @include baseFont;
+}
+
+button {
+  @include baseFont;
+  padding: 0.5ch 1.5em;
+  margin: 0 auto;
+  border: none;
+
+  color: $white;
+  background-color: $grey;
+  outline: 1px solid $white;
+  border-radius: 4px;
+  transition: 300ms;
+  &:hover {
+    background-color: $white;
+    color: $acccentColor;
+  }
+}
