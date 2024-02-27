@@ -1,26 +1,16 @@
 import { createContext, useState, useEffect } from 'react';
 import { fetchProducts } from './fetchProducts';
-
-interface Product {
-  id: string;
-  productName: string;
-  price: string;
-  productDescription: string;
-  company: string;
-}
-
-export const AppContext = createContext(
-  {} as {
-    products: Product[];
-    setProducts: React.Dispatch<React.SetStateAction<Product[]>>;
-    cart: any[];
-    setCart: React.Dispatch<React.SetStateAction<any[]>>;
-  }
-);
+import { IAppContext, IProduct } from '../utils/types';
+export const AppContext = createContext<IAppContext>({
+  products: [],
+  setProducts: () => {},
+  cart: [],
+  setCart: () => {},
+});
 
 export const AppProvider = ({ children }) => {
-  const [products, setProducts] = useState<Product[]>([]);
-  const [cart, setCart] = useState<any[]>([{msg : "test"}]);
+  const [products, setProducts] = useState<IProduct[]>([]);
+  const [cart, setCart] = useState<any[]>([{ msg: 'test' }]);
 
   useEffect(() => {
     fetchProducts()
