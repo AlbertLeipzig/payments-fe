@@ -51,6 +51,7 @@ export const Checkout = () => {
             style={{ layout: 'vertical' }}
             createOrder={(data, actions) => onCreateOrder(data, actions)}
             onApprove={(data, actions) => onApproveOrder(data, actions)}
+            className='checkout__buttons'
           />
         </>
       )}

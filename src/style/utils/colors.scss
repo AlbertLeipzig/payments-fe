@@ -1,0 +1,13 @@
+$hue: 5;
+$saturation: 54%;
+$mainColorLight: hsl($hue, $saturation, 36%);
+$mainColor: hsl($hue, $saturation, 29%);
+$mainColorDark: hsl($hue, $saturation, 16%);
+$dark1: hsl(200, 13%, 5%);
+$acccentColor: hsl(185, 50%, 30%);
+$acccentColorLight: hsl(185, 50%, 40%);
+$acccentColorDark: hsl(124, 62%, 9%);
+$acccentColorMuted: hsl(124, 10%, 80%);
+$white: hsl(0 0% 80%);
+$grey: hsl(calc($hue + 180) 10% 40%);
+$darkGrey: hsl(calc($hue + 180) 10% 20%);

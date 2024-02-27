@@ -1,0 +1,33 @@
+@use '../utils/colors.scss' as *;
+.product-card {
+  width: clamp(280px, 50%, 350px);
+  padding: 30px;
+  border-radius: 10px;
+  margin: 3vh auto;
+  background-color: $grey;
+  h3 {
+    text-align: center;
+    color: $acccentColorMuted;
+  }
+  p {
+    margin: 5px;
+    color: $darkGrey;
+    font-size: 1.9rem;
+  }
+  &--info {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+  }
+  &__button-container {
+    display: flex;
+  }
+}
+
+.landing-page {
+  .product-card {
+    .remove-button {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@use '../utils/colors.scss' as *;
+header {
+  display: flex;
+  padding: 2.5vh 5vw;
+  align-items: center;
+  justify-content: space-between;
+  h2 {
+    font-size: 2.1rem;
+    color: $acccentColor;
+  }
+  nav ul {
+    display: flex;
+    gap: 10px;
+  }
+}

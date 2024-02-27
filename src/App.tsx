@@ -15,10 +15,11 @@ function App() {
   <PayPalScriptProvider options={{ clientId: VITE_APP_PAYPAL_CLIENT_ID }} />;
 
   return (
-    <>
+    <div className="app">
       <AppProvider>
         <PayPalScriptProvider options={initialPaypalOptions}>
           <header>
+            <h2>Company Name</h2>
             <nav>
               <ul>
                 <li>
@@ -36,7 +37,7 @@ function App() {
           </main>
         </PayPalScriptProvider>
       </AppProvider>
-    </>
+    </div>
   );
 }
 
