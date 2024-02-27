@@ -1,16 +1,24 @@
 import { createContext, useState, useEffect } from 'react';
 import { fetchProducts } from './fetchProducts';
 import { IAppContext, IProduct } from '../utils/types';
-export const AppContext = createContext<IAppContext>({
+
+
+
+const initialAppState = {
   products: [],
   setProducts: () => {},
   cart: [],
   setCart: () => {},
-});
+};
+
+export const AppContext = createContext<IAppContext>(initialAppState);
+
+
 
 export const AppProvider = ({ children }) => {
+
   const [products, setProducts] = useState<IProduct[]>([]);
-  const [cart, setCart] = useState<any[]>([{ msg: 'test' }]);
+  const [cart, setCart] = useState<any[]>([]);
 
   useEffect(() => {
     fetchProducts()

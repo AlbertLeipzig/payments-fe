@@ -12,7 +12,7 @@ export const ProductCard = (product: IProduct) => {
   };
 
   return (
-    <div className="product-card" key={product.id}>
+    <div className="product-card">
       <h3>{product.productName}</h3>
       <p>{product.price} €</p>
       <p>{product.company}</p>

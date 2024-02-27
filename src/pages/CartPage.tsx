@@ -1,13 +1,10 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext } from 'react';
 import { AppContext } from '../utils/AppContext';
 import { ProductCard } from '../components/ProductCard';
 
 export const CartPage = () => {
   const { cart } = useContext(AppContext);
 
-
-
-  
   return (
     <div className="cart-page">
       <h1>Cart Page</h1>
